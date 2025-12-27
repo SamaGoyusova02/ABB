@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABB</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link href="src/output.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+     
+      margin: 0;
+      padding: 0;
+    }
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--swiper-theme-color);
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: var(--swiper-theme-color);
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+    .slide1{
+        background: #7e48fa;
+    }
+    .slide2{
+        background: #1b63ed;
+    }
+    .slide3{
+        background: #9b39e5;
+    }
+    .slide4{
+        background: #1b63ed;
+    }
+    .slide5{
+        background: #009ec6;
+    }
+    .slide6{
+        background: #1b63ed;
+    }
+    .slide7{
+        background: #009ec6;
+    }
+  </style>
+</head>
+<body>
+     <img class="w-[60px] fixed left-0 bottom-0" src="img/humanfixed.png" alt="humanfixed"/>
+    
+        <header class="flex border-b border-gray-300 py-4 px-4 sm:px-10 bg-white min-h-[70px] tracking-wide relative z-50">
+      <div class="flex flex-wrap items-center gap-4 w-full max-w-6xl mx-auto">
+        <a href="javascript:void(0)" class="max-sm:hidden"><img src="img/mainlogo.png" alt="logo" class="w-24" />
+        </a>
+        <a href="javascript:void(0)" class="hidden max-sm:block"><img src="img/mainlogo.png" alt="logo" class="w-22" />
+        </a>
+
+        <div id="collapseMenu"
+          class="lg:!flex lg:flex-auto lg:ml-12 max-lg:hidden max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50">
+          <button id="toggleClose" class="lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border border-gray-200 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 fill-black" viewBox="0 0 320.591 320.591">
+              <path
+                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                data-original="#000000"></path>
+              <path
+                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                data-original="#000000"></path>
+            </svg>
+          </button>
+
+          <div
+            class="lg:!flex lg:flex-auto max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
+
+            <ul class="lg:flex lg:gap-x-8 max-lg:space-y-2">
+              <li class="mb-6 hidden max-lg:block">
+                <a href=""><img src="img/mainlogo.png" alt="logo" class="w-36" />
+                </a>
+              </li>
+              <li class="max-lg:border-b max-lg:border-gray-300 max-lg:py-3">
+                <a href='javascript:void(0)'
+                  class="hover:text-blue-700 block font-medium text-[15px]">Fərdi</a>
+              </li>
+              <li class="max-lg:border-b max-lg:border-gray-300 max-lg:py-3"><a href='javascript:void(0)'
+                class="hover:text-blue-700 text-slate-900 block font-medium text-[15px]">Biznes</a>
+              </li>
+              <li class="max-lg:border-b max-lg:border-gray-300 max-lg:py-3"><a href='javascript:void(0)'
+                class="hover:text-blue-700 text-slate-900 block font-medium text-[15px]">Haqqımızda</a>
+              </li>
+              <li class="max-lg:border-b max-lg:border-gray-300 max-lg:py-3"><a href='javascript:void(0)'
+                class="hover:text-blue-700 text-slate-900 block font-medium text-[15px]">İnvestorlarla Əlaqə</a>
+              </li>
+            </ul>
+
+            <ul class="lg:flex lg:items-center ml-auto max-lg:block lg:space-x-8">
+              <li class="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 max-lg:mt-2">
+                <a href='javascript:void(0)'
+                  class="hover:text-blue-700 text-slate-900 block font-medium text-[15px]"><i class="fa-solid fa-magnifying-glass text-[#7a7d82]"></i></a>
+              </li>
+               <div class="border-l border-gray-400 h-6 max-lg:hidden"></div>
+              <li class="max-lg:border-b max-lg:border-gray-300 max-lg:py-3 max-lg:mt-2 lg:pr-3"><a href='javascript:void(0)'
+                class="hover:text-blue-700 text-[#7a7d82] block font-medium text-[17px]">AZ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-l border-gray-400 h-6 max-lg:hidden"></div>
+
+        <div class="flex items-center ml-auto space-x-4">
+          <a href='javascript:void(0)' class="hover:text-blue-700 text-slate-900 block font-medium text-[15px] lg:pr-2"><i class="fa-solid fa-phone text-[#7a7d82]"></i><span class="text-[#7a7d82] pl-3">937</span></a>
+          <button
+            class="px-4 py-2 text-sm rounded-md font-medium text-white border-2 border-[#1b63ed] bg-[#1b63ed] hover:bg-[#162043] cursor-pointer hidden md:flex lg:flex "><i class="fa-solid fa-location-dot text-white pr-4 pt-1"></i>Xidmət Şəbəkəsi</button>
+
+          <button id="toggleOpen" class="lg:hidden cursor-pointer">
+            <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+        <div class=" bg-[#f0f0f0] flex flex-col lg:flex-row justify-center items-center pt-6 lg:pt-10">
+    <div class=" w-full md:w-[600px] lg:w-[770px] ">
+                 <swiper-container class="mySwiper " pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+    <swiper-slide class="slide1 h-[300px] rounded-[50px]">
+        <div class="flex ">
+            <div class="lg:mx-9" >
+                <div class="bg-[#9365fb] w-[150px] rounded-[10px] ml-6 lg:ml-0 lg:mt-10 lg:mb-7"><p class="text-white ">ABB AI Assis</p></div>
+                <p class="text-white text-3xl font-bold pt-3 pb-2 lg:pb-0 lg:pt-0 ">Səsli Süni İntellekt köməkçiniz</p>
+                <p class="text-white flex justify-start ml-4 md:ml-4 lg:ml-0 pb-3  lg:pb-5 lg:pt-4">Artıq xidmətinizdədir !</p>
+                <div class="bg-white w-[150px] rounded-[10px] py-2 ml-4 md:ml-4 lg:ml-0"> <a href="">ABB mobile </a></div>
+            </div>
+            <div class="w-full md:50% lg:w-1/3" ><img src="img/slider1.png" alt="slider1"/></div>
+        </div>
+    </swiper-slide>
+    <swiper-slide class="slide2 h-[300px] rounded-[60px]">
+        <div class="flex ">
+            <div class="lg:mx-9" >
+                <div class="bg-[#407cf0] w-[150px] rounded-[10px] ml-6 lg:ml-0 lg:mt-10 lg:mb-7"><p class="text-white ">ABB AI Assis</p></div>
+                <p class="text-white text-3xl font-bold pt-3 pb-2 lg:pb-0 lg:pt-0 ">Səsli Süni İntellekt köməkçiniz</p>
+                <p class="text-white flex justify-start ml-4 md:ml-4 lg:ml-0 pb-3  lg:pb-5 lg:pt-4">Artıq xidmətinizdədir !</p>
+                <div class="bg-white w-[150px] rounded-[10px] py-2 ml-4 md:ml-4 lg:ml-0"> <a href="">ABB mobile </a></div>
+            </div>
+            <div class="w-full md:1/3 lg:w-1/3" ><img src="img/slider2.png" alt="slider1"/></div>
+        </div>
+    </swiper-slide>
+    <swiper-slide class="slide3 h-[300px] rounded-[60px]">
+        <div class="flex ">
+            <div class="lg:mx-9" >
+                <div class="bg-[#ab59e9] w-[150px] rounded-[10px] ml-6 lg:ml-0 lg:mt-10 lg:mb-7"><p class="text-white ">ABB AI Assis</p></div>
+                <p class="text-white text-3xl font-bold pt-3 pb-2 lg:pb-0 lg:pt-0 ">Səsli Süni İntellekt köməkçiniz</p>
+                <p class="text-white flex justify-start ml-4 md:ml-4 lg:ml-0 pb-3  lg:pb-5 lg:pt-4">Artıq xidmətinizdədir !</p>
+                <div class="bg-white w-[150px] rounded-[10px] py-2 ml-4 md:ml-4 lg:ml-0"> <a href="">ABB mobile </a></div>
+            </div>
+            <div class="w-full md:1/3 lg:w-1/3" ><img src="img/slider3.png" alt="slider1"/></div>
+        </div>
+    </swiper-slide>
+    <swiper-slide class="slide4 h-[300px] rounded-[60px]">
+        <div class="flex ">
+            <div class="lg:mx-9" >
+                <div class="bg-[#407cf0] w-[150px] rounded-[10px] ml-6 lg:ml-0 lg:mt-10 lg:mb-7"><p class="text-white ">ABB AI Assis</p></div>
+                <p class="text-white text-3xl font-bold pt-3 pb-2 lg:pb-0 lg:pt-0 ">Səsli Süni İntellekt köməkçiniz</p>
+                <p class="text-white flex justify-start ml-4 md:ml-4 lg:ml-0 pb-3  lg:pb-5 lg:pt-4">Artıq xidmətinizdədir !</p>
+                <div class="bg-white w-[150px] rounded-[10px] py-2 ml-4 md:ml-4 lg:ml-0"> <a href="">ABB mobile </a></div>
+            </div>
+            <div class="w-full md:1/3 lg:w-1/3" ><img src="img/slider4.png" alt="slider1"/></div>
+        </div>
+    </swiper-slide>
+    <swiper-slide class="slide5 h-[300px] rounded-[60px]">
+        <div class="flex ">
+            <div class="lg:mx-9" >
+                <div class="bg-[#29aecf] w-[150px] rounded-[10px] ml-6 lg:ml-0 lg:mt-10 lg:mb-7"><p class="text-white ">ABB AI Assis</p></div>
+                <p class="text-white text-3xl font-bold pt-3 pb-2 lg:pb-0 lg:pt-0 ">Səsli Süni İntellekt köməkçiniz</p>
+                <p class="text-white flex justify-start ml-4 md:ml-4 lg:ml-0 pb-3  lg:pb-5 lg:pt-4">Artıq xidmətinizdədir !</p>
+                <div class="bg-white w-[150px] rounded-[10px] py-2 ml-4 md:ml-4 lg:ml-0"> <a href="">ABB mobile </a></div>
+            </div>
+            <div class="w-full md:1/3 lg:w-1/3" ><img src="img/slider5.png" alt="slider1"/></div>
+        </div>
+    </swiper-slide>
+    <swiper-slide class="slide6 h-[300px] rounded-[60px]">
+        <div class="flex ">
+            <div class="lg:mx-9" >
+                <div class="bg-[#9365fb] w-[150px] rounded-[10px] ml-6 lg:ml-0 lg:mt-10 lg:mb-7"><p class="text-white ">ABB AI Assis</p></div>
+                <p class="text-white text-3xl font-bold pt-3 pb-2 lg:pb-0 lg:pt-0 ">Səsli Süni İntellekt köməkçiniz</p>
+                <p class="text-white flex justify-start ml-4 md:ml-4 lg:ml-0 pb-3  lg:pb-5 lg:pt-4">Artıq xidmətinizdədir !</p>
+                <div class="bg-white w-[150px] rounded-[10px] py-2 ml-4 md:ml-4 lg:ml-0"> <a href="">ABB mobile </a></div>
+            </div>
+            <div class="w-full md:1/3 lg:w-1/3" ><img src="img/slider6.png" alt="slider1"/></div>
+        </div>
+    </swiper-slide>
+     <swiper-slide class="slide7 h-[300px] rounded-[60px]">
+        <div class="flex ">
+            <div class="lg:mx-9" >
+                <div class="bg-[#29aecf] w-[150px] rounded-[10px] ml-6 lg:ml-0 lg:mt-10 lg:mb-7"><p class="text-white ">ABB AI Assis</p></div>
+                <p class="text-white text-3xl font-bold pt-3 pb-2 lg:pb-0 lg:pt-0 ">Səsli Süni İntellekt köməkçiniz</p>
+                <p class="text-white flex justify-start ml-4 md:ml-4 lg:ml-0 pb-3  lg:pb-5 lg:pt-4">Artıq xidmətinizdədir !</p>
+                <div class="bg-white w-[150px] rounded-[10px] py-2 ml-4 md:ml-4 lg:ml-0"> <a href="">ABB mobile </a></div>
+            </div>
+            <div class="w-full md:1/3 lg:w-1/3" ><img src="img/slider7.png" alt="slider1"/></div>
+        </div>
+     </swiper-slide>
+    <div class="autoplay-progress" slot="container-end">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </swiper-container>
+            </div>
+
+            <div class="bg-white rounded-[50px] h-[300px] w-[350px] lg:ml-[40px] mt-6 lg:mt-0 relative overflow-hidden">
+                <div class="flex justify-between mx-4 mt-8 lg:mx-4 lg:mt-7">
+                    <div><p class="font-bold text-2xl">DigiDeposit</p></div>
+                    <div class="bg-[#f1f1f1] w-[40px] flex justify-center items-center rounded-[50%]"><p class="rotate-[-30deg] text-2xl">➜</p></div>
+                </div>
+                <p class="pl-3 pt-5 lg:pl-4 lg:mt-3">ABB mobile tətbiqindən əmanət hesabınızı onlayn açın  </p>
+                <div class="absolute bottom-0 right-0"><img class="w-[250px]" src="img/digipost.png" alt="digipost"/></div>
+            </div>
+            
+        </div>
+       
+        <div class="flex flex-col md:flex-row lg:flex-row flex-wrap justify-center  bg-[#f0f0f0] lg:pt-10 gap-10">
+                 <div class="bg-white rounded-[50px] h-[300px] w-[350px] mt-6 lg:mt-0 relative overflow-hidden">
+                <div class="flex justify-between mx-4 mt-8 lg:mx-4 lg:mt-7">
+                    <div><p class="font-bold text-2xl">DigiDeposit</p></div>
+                    <div class="bg-[#f1f1f1] w-[40px] flex justify-center items-center rounded-[50%]"><p class="rotate-[-30deg] text-2xl">➜</p></div>
+                </div>
+                <p class="pl-3 pt-5 lg:pl-4 lg:mt-3">ABB mobile tətbiqindən əmanət hesabınızı onlayn açın  </p>
+                <div class="absolute bottom-0 right-0"><img class="w-[180px]" src="img/ABB1.png" alt="digipost"/></div>
+            </div>
+
+             <div class="bg-white rounded-[50px] h-[300px] w-[350px]  mt-6 lg:mt-0 relative overflow-hidden">
+                <div class="flex justify-between mx-4 mt-8 lg:mx-4 lg:mt-7">
+                    <div><p class="font-bold text-2xl">DigiDeposit</p></div>
+                    <div class="bg-[#f1f1f1] w-[40px] flex justify-center items-center rounded-[50%]"><p class="rotate-[-30deg] text-2xl">➜</p></div>
+                </div>
+                <p class="pl-3 pt-5 lg:pl-4 lg:mt-3">ABB mobile tətbiqindən əmanət hesabınızı onlayn açın  </p>
+                <div class="absolute bottom-0 right-0"><img class="w-[200px]" src="img/ABB2.png" alt="digipost"/></div>
+            </div>
+
+             <div class="bg-white rounded-[50px] h-[300px] w-[350px]  mt-6 lg:mt-0 relative overflow-hidden">
+                <div class="flex justify-between mx-4 mt-8 lg:mx-4 lg:mt-7">
+                    <div><p class="font-bold text-2xl">DigiDeposit</p></div>
+                    <div class="bg-[#f1f1f1] w-[40px] flex justify-center items-center rounded-[50%]"><p class="rotate-[-30deg] text-2xl">➜</p></div>
+                </div>
+                <p class="pl-3 pt-5 lg:pl-4 lg:mt-3">ABB mobile tətbiqindən əmanət hesabınızı onlayn açın  </p>
+                <div class="absolute bottom-0 right-0"><img class="w-[200px]" src="img/ABB3.png" alt="digipost"/></div>
+            </div>
+        </div>
+        
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+
+    const swiperEl = document.querySelector("swiper-container");
+    swiperEl.addEventListener("autoplaytimeleft", (e) => {
+      const [swiper, time, progress] = e.detail;
+      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    });
+  </script>
+
+    </main>
+    <footer></footer>
+</body>
+</html>
