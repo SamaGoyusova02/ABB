@@ -428,6 +428,9 @@
   .w-36 {
     width: calc(var(--spacing) * 36);
   }
+  .w-\[6px\] {
+    width: 6px;
+  }
   .w-\[18px\] {
     width: 18px;
   }
@@ -449,11 +452,17 @@
   .w-\[55px\] {
     width: 55px;
   }
+  .w-\[61px\] {
+    width: 61px;
+  }
   .w-\[62px\] {
     width: 62px;
   }
-  .w-\[65px\] {
-    width: 65px;
+  .w-\[63px\] {
+    width: 63px;
+  }
+  .w-\[64px\] {
+    width: 64px;
   }
   .w-\[70px\] {
     width: 70px;
