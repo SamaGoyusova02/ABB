@@ -359,12 +359,6 @@
   .inline-block {
     display: inline-block;
   }
-  .table {
-    display: table;
-  }
-  .h-3 {
-    height: calc(var(--spacing) * 3);
-  }
   .h-3\.5 {
     height: calc(var(--spacing) * 3.5);
   }
@@ -407,9 +401,6 @@
   .min-h-\[70px\] {
     min-height: 70px;
   }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
   .w-3\.5 {
     width: calc(var(--spacing) * 3.5);
   }
@@ -427,9 +418,6 @@
   }
   .w-36 {
     width: calc(var(--spacing) * 36);
-  }
-  .w-\[6px\] {
-    width: 6px;
   }
   .w-\[18px\] {
     width: 18px;
@@ -452,17 +440,8 @@
   .w-\[55px\] {
     width: 55px;
   }
-  .w-\[61px\] {
-    width: 61px;
-  }
-  .w-\[62px\] {
-    width: 62px;
-  }
-  .w-\[63px\] {
-    width: 63px;
-  }
-  .w-\[64px\] {
-    width: 64px;
+  .w-\[60px\] {
+    width: 60px;
   }
   .w-\[70px\] {
     width: 70px;
@@ -530,9 +509,6 @@
   .min-w-\[320px\] {
     min-width: 320px;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .-rotate-\[20deg\] {
     rotate: calc(20deg * -1);
   }
@@ -547,9 +523,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1010,10 +983,6 @@
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .group-hover\:block {
     &:is(:where(.group):hover *) {
@@ -1962,11 +1931,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -2063,7 +2027,6 @@
       --tw-gradient-to-position: 100%;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
       --tw-space-y-reverse: 0;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
